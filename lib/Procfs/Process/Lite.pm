@@ -14,6 +14,8 @@ sub new {
     $self->_init;
 }
 
+# ps -p $$ -o lstart=
+# perl -MHTTP::Date -e 'my $str = `ps -p $$ -o lstart=`; chomp $str; print str2time($str)'
 sub starttime {
     my $self = shift;
     my $starttime = sprintf "%d", $self->{stat}{starttime} / CLK_TCK;
