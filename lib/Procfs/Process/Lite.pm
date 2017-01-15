@@ -85,8 +85,7 @@ sub _init_fd {
     my $pid = $self->{pid};
     opendir my $dh, "/proc/$pid/fd" or return;
     my @fd = grep { !/^\.{1,2}$/ } readdir $dh;
-    close $dh;
-    undef $dh;
+    closedir $dh;
     my %fd = map {
         my $fd = $_;
         my $link = readlink "/proc/$pid/fd/$fd";
