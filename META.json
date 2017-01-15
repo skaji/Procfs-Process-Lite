@@ -24,9 +24,14 @@
       ]
    },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.28"
+         }
+      },
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.034"
+            "Module::Build" : "0.28"
          }
       },
       "develop" : {
@@ -54,7 +59,6 @@
       }
    },
    "version" : "0.001",
-   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0225",
-   "x_static_install" : 1
+   "x_serialization_backend" : "Cpanel::JSON::XS version 3.0225"
 }
 
